@@ -13,6 +13,7 @@ async function login() {
         console.log("logged in user:", user);
         console.log(user.get("ethAddress"));
         ethadd = user.get("ethAddress");
+        getid(ethadd);
         adduser(ethadd);
         hide();
         // nfts(ethadd);
@@ -25,7 +26,7 @@ async function login() {
     alert("Already Logged In");
     // swal("Already Logged In");
   }
-}
+};
 
 async function logOut() {
   await Moralis.User.logOut();
@@ -35,33 +36,20 @@ async function logOut() {
   document.getElementById("p2e").style.display = "none";
   document.getElementById("inv").style.display = "none";
   console.log("logged out");
-}
+};
 logOut();
 
-// function getinvlink(){
-//   const urlParams = new URLSearchParams(window.location.search);
-//   const inv = urlParams.get("inv");
-//   // console.log(inv);
-//   if(inv != null){
-//     var invhash = inv;
-//   }
-//   fetch("http://localhost:8081/getinvitation?inv=" + inv)
-//   .then(function(res) {
-//       return res.json();
-//   })
-//   .then(function(data) {
-//       console.log(data[0].userid);
-//       var id = data[0].userid;
-//       fetch("http://localhost:8081/addtokens?id=" + id)
-//       .then(function(res) {
-//         return res.json();
-//     })
-//     .then(function(data) {
-//         console.log(data);
-//       })
-//   })
-// }
-// }
+var userid;
+function getid(){
+  fetch("http://localhost:8081/getid?ethadd=" + ethadd)
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    userid = data[0].id;
+    document.getElementById("token").innerHTML = data[0].tokens;
+  })
+};
 
 function copy() {
   /* Get the text field */
@@ -76,10 +64,9 @@ function copy() {
 
   /* Alert the copied text */
   alert("Copied the Link: " + copyText.value);
-}
+};
 
 // program to generate random strings
-
 // declare all characters
 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
@@ -95,7 +82,7 @@ function generateString() {
     })
     .then(function (data) {
       console.log(data);
-      if (data == "" || data[0].userid == userid) {
+      if (data == "") {
         let invhash = result + userid;
         fetch("http://localhost:8081/addinvitation", {
           headers: {
@@ -114,6 +101,12 @@ function generateString() {
         $('#inviteModal').modal('show');
       }
     })
+};
+
+$("#nft").click(al());
+
+function al(){
+  alert("Alert");
 }
 
 async function nfts(add) {
@@ -133,7 +126,7 @@ async function nfts(add) {
     `}
   // console.log(data);
   // console.log(metadata);
-}
+};
 
 // function load(){
 // fetch("http://localhost:8081/fetch")
@@ -163,9 +156,8 @@ function resize(myimg) {
   window.onReady(function onReady() {
     game.onload();
   });
-}
+};
 
-var userid;
 function adduser(waletadd) {
   fetch("http://localhost:8081/fetch")
     .then(function (res) {
@@ -177,19 +169,17 @@ function adduser(waletadd) {
         adduser2(waletadd);
         console.log("1st User Login");
       }
-      userid = data[0].id;
-      for (let i = 0; i < data.length; i++) {
-        console.log(data[i].waletadd, waletadd);
-        if (data[i].waletadd != waletadd) {
+      var arr = data.map(item => {
+        return item.waletadd;
+    })
+        // console.log(arr);
+        if (arr.indexOf(waletadd) === -1) {
           adduser2(waletadd);
-          console.log("1st Time Login");
           // get url params
           const urlParams = new URLSearchParams(window.location.search);
           const inv = urlParams.get("inv");
-          console.log(inv, "inv");
+          // console.log(inv, "inv");
           if (inv != null) {
-            var invhash = inv;
-            console.log(invhash, "invhash");
             // get invite table
             fetch("http://localhost:8081/getinvitation?inv=" + inv)
               .then(function (res) {
@@ -198,7 +188,7 @@ function adduser(waletadd) {
               .then(function (data) {
                 console.log(data[0].userid);
                 var id = data[0].userid;
-                // update user tokens
+               // update user tokens
                 fetch("http://localhost:8081/addtokens?id=" + id)
                   .then(function (res) {
                     return res.json();
@@ -208,7 +198,6 @@ function adduser(waletadd) {
                   })
               })
           }
-        }
       }
     })
 };
@@ -221,7 +210,7 @@ function adduser2(waletadd) {
     method: "POST",
     body: JSON.stringify({ "waletadd": waletadd, }),
   })
-}
+};
 
 function addscore(save) {
   var score = save.score;
@@ -234,6 +223,10 @@ function addscore(save) {
     method: "POST",
     body: JSON.stringify({ "ethadd": ethadd, "score": score, "steps": steps, }),
   })
+};
+
+function withdraw(){
+  $('#wdModal').modal('show');
 };
 
 var game = {

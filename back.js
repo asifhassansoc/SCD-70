@@ -30,7 +30,7 @@ app.post('/adduser', function (req, res) {
     let sql = "INSERT INTO users SET ?";
     connection.query(sql, record, (err) => {
       if (err) throw err;
-      console.log(err);
+      // console.log(err);
         res.end();
       });
     res.end();
@@ -45,7 +45,7 @@ app.post('/adduser', function (req, res) {
     let sql = "INSERT INTO invite SET ?";
     connection.query(sql, record, (err) => {
       if (err) throw err;
-      console.log(err);
+      // console.log(err);
         res.end();
       });
     res.end();
@@ -67,6 +67,14 @@ app.post('/adduser', function (req, res) {
       });
     res.end();
  })
+
+app.get('/getid', async function (req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+    connection.query(`SELECT * FROM users WHERE waletadd="${req.query.ethadd}"`, function (err, result) {
+        if (err) throw err;
+        res.send(result);
+      });
+  })
 
 app.get('/fetch', async function (req, res) {
 res.setHeader('Access-Control-Allow-Origin', '*');
@@ -94,7 +102,6 @@ app.get('/getinvitation', async function (req, res) {
 
 app.get('/addtokens', async function (req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  // var token = '';
     connection.query(`SELECT * FROM users WHERE id="${req.query.id}"`, function (err, result) {
         if (err) throw err;
         res.send(result);
