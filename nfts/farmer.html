@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link href="assets/css/farmer.css" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.png">
+    <link rel=stylesheet href="https://fonts.googleapis.com/css?family=Material+Icons">
+    <title>Document</title>
+</head>
+<style>
+    @media (max-width: 1000px) {
+        .cont-top {
+            border: 2px solid black;
+
+            margin-top: 80px;
+
+        }
+
+        .cont-top-2 {
+            border: 2px solid black;
+            height: 200px;
+            margin-top: 70px;
+
+        }
+
+        .sec-2-in {
+            background-color: #050d14;
+
+            border-radius: 20px;
+            margin-top: 25px;
+            margin-left: 0;
+            padding-bottom: 50px;
+
+        }
+
+        .b-box {
+            height: 110px !important;
+
+        }
+
+        .head-farmer {
+            height: 250px;
+        }
+
+        .cont-top-inner {
+            height: 100px;
+            border-radius: 15px;
+            margin-top: 80px;
+            background-color: #050d14;
+        }
+
+        .content-farmer {
+            margin-top: 300px;
+        }
+
+        .sec-3-in {
+            background-color: #090b0e;
+            padding-bottom: 10px;
+
+            border-radius: 20px;
+            margin-top: 30px;
+            margin-left: 0px;
+        }
+
+        .sec-4 {
+            margin-top: 450px;
+        }
+
+        .sec-5 {
+            margin-left: 10px;
+
+        }
+    }
+</style>
+
+<body class="body-farmer">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark p-3">
+            <!-- Container wrapper -->
+            <div class="container">
+                <!-- Navbar brand -->
+                <a class="navbar-brand my-1" href="https://mdbgo.com/">
+        
+                    <a class=" h4" href="#">Meta battle birds </a>
+        
+                </a>
+        
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample"
+                    aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-chevron-circle-down text-warning"></i>
+                </button>
+        
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto  mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+        
+                      
+        
+                        <li class="nav-item">
+                            <a class="nav-link active" href="farmer.html">Farmer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="explore-1.html">Marketplace</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="connect-wallet.html">Wallet connect</a>
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+        
+                    <div class="d-flex align-items-center">
+        
+                        <a class="nav-link px-3 me-3" href="login.html">Login</a>
+        
+                        <a href="signup.html" type="button" class="btn btn-primary me-3">
+                            Register
+                        </a>
+                        <a class="btn btn-dark px-3" href="#" role="button">Download</a>
+                    </div>
+                </div>
+                <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+
+        <nav class="navbar navbar-expand-lg m-0 p-0" style="background-color: #202833 !important;">
+            <div class="container-fluid">
+                <ul class="navbar-nav d-flex flex-row">
+                    <!-- Icons -->
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <!-- Icon dropdown -->
+                    <li class="nav-item me-3 me-lg-0 dropdown">
+                        <a class="nav-link " href="#">
+                            <i class="fa fa-credit-card"></i>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="head-farmer ">
+            <div class="overlay-farmer">
+                <div class="container cont-top">
+                    <div class="row">
+                        <div class="col-lg-1 pt-4"></div>
+
+
+                        <div class="col-lg-2">
+                            <div class="text-box">
+                                <h4 class="h4">total staked</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="text-box">
+                                <h4 class="h4">total staked</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="text-box">
+                                <h4 class="h4">total staked</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="text-box">
+                                <h4 class="h4">total staked</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="text-box">
+                                <h4 class="h4">total staked</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+
+                        <div class="col-lg-12">
+                            <div class="container cont-top-inner">
+                                <div class="row">
+                                    <div class="col-lg-1"></div>
+                                    <div class="col-2 text-center">
+                                        <img src="assets/images/logo-jpg.jpeg" class="pt-1" height="90" alt="">
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <img src="assets/images/logo-jpg.jpeg" class="pt-1" height="90" alt="">
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <img src="assets/images/logo-jpg.jpeg" class="pt-1" height="90" alt="">
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <img src="assets/images/logo-jpg.jpeg" class="pt-1" height="90" alt="">
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <img src="assets/images/logo-jpg.jpeg" class="pt-1" height="90" alt="">
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content-farmer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="h4">NFT FARMER EVENT</div>
+                    <p class="text-white p">When you meet the vemeta battle birds or hash power requirements, you can participate in
+                        various limited-time MOMO farm events.</p>
+                </div>
+
+                <div class="col-lg-2"></div>
+
+                <div class="col-lg-4 d-flex">
+                    <div class="how">
+                        <button class="btn-primary .btn-sm rounded ml-2 " style="height: 30px;">How to get
+                            Meta battle birds</button>
+
+           
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container cont-top mt-4 mb-4">
+            <div class="row">
+                <div class="col-lg-7 text-center">
+                    <h4 style="font-size: 20pt;" class="text-center text-white pt-4">BOX RAFFLE</h4>
+                    <img src="https://www.mobox.io/momo/img/box_view.9db7b7f0.png" class="mt-2 b-box" alt="">
+                </div>
+                <div class="col-lg-4">
+                    <div class="container sec-2-in">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="text-box">
+                                    My Vembex
+                                    <br> 0
+                                </div>
+                                <div class="text-box">
+                                    My Vembex
+                                    <br> 0
+                                </div>
+                                <div class="text-box">
+                                    My Vembex
+                                    <br> 0
+                                </div>
+                                <div class="btn-primary btn-md text-center mt-3 p-2">
+                                    participate
+                                </div>
+                                <div class="text-box"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-box">
+                                    My Vembex
+                                    <br> 0
+                                </div>
+                                <div class="text-box">
+                                    My Vembex
+                                    <br> 0
+                                </div>
+                                <div class="text-box">
+                                    My Vembex
+                                    <br> 0
+                                </div>
+                                <div class="btn-outline-primary btn-md text-center mt-3">Buy
+                                    now
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container cont-top-2 ">
+            <div class="row">
+                <div class="col-lg-8 ">
+                    <img src="assets/images/2.PNG" class="sec-mid-in" alt="">
+                </div>
+                <div class="col-lg-4">
+                    <div class="container sec-3-in">
+                        <div class="row">
+                            <div class="col-lg-12 ">
+                                <div class="text-box  ">
+                                    <p class="text-white"><label>Daily distribution</label></p>
+                                    <h6 class="text-white">0 Meta Battle birds</h6>
+                                </div>
+                                <label>total hash power</label>
+                                <br>
+                                <input type="text" class=" bg-dark rounded" value="0" style="width: 70%;">
+                                <br>
+                                <label>total hash power</label>
+                                <br>
+                                <input type="text" class="bg-dark rounded" value="0" style="width: 70%;">
+                                <br>
+                                <label>
+                                    Mining rate
+                                </label>
+                                <br>
+                                <div class="box">
+                                    <label>1000 Hash Power≈0 meta battle birds/DAY</label>
+                                    <div class="text-box">
+                                        Meta battle birds
+                                    </div>
+                                </div>
+                                <br>
+                                <a class="btn-primary btn-lg rounded disabled">Claim</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container  sec-4">
+        <div class="row mt-5 pt-5">
+            <div class="col-lg-6">
+                <div class="h4">Platform Game</div>
+                <p class="text-white p">Playmeta battle birds games, earn birds token.
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card mt-2">
+                    <img src="assets/images/png_20220204_000641_0000.png" class="card-img-top"
+                        alt="Sunset Over the Sea" />
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="text-box text-warning">
+                            Go <i class="fa fa-angle-double-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mt-2">
+                    <img src="assets/images/png_20220204_111622_0000.png" class="card-img-top"
+                        alt="Sunset Over the Sea" />
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="text-box text-warning">
+                            Go <i class="fa fa-angle-double-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mt-2">
+                    <img src="assets/images/png_20220205_151730_0000.png" class="card-img-top"
+                        alt="Sunset Over the Sea" />
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="text-box text-warning">
+                            Go <i class="fa fa-angle-double-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container sec-5">
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <div class="h4">vemeta battle birds</div>
+                <p class="text-white p">vemeta battle birds will be the governance token for meta battle birds platform and an important ticket
+                    for participating in meta battle birds farmer events.
+                </p>
+            </div>
+            <div class="row mt-3 pt-2  text-center">
+                <div class="col-lg-12 p-3" style="background-color: rgb(27, 26, 26); border-radius: 10px;">
+                    <div class="container p-2 rounded" style="background-color:#192029; ;">
+                        <div class="row p-2 text-white">
+                            <div class="col-lg-3 p-2">
+                                Total meta battle birds Staked
+
+                                <div class="box-2 p-2">
+                                    0
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 p-2">
+                                Total meta battle birds Staked
+
+                                <div class="box-2 p-2">
+                                    0
+                                </div>
+                            </div>
+                            <div class="col-lg-3 p-2">
+                                Total meta battle birds Staked
+
+                                <div class="box-2 p-2">
+                                    0
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 p-2">
+                                Total meta battle birds Staked
+
+                                <div class="box-2 p-2">
+                                    0
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container sec-5">
+        <div class="row mt-5">
+            <div class="col-lg-12 ">
+                <div class="h4">Buyback Pool</div>
+                <p class="text-white p">meta battle birds will add the corresponding proportion of daily revenue into the buyback
+                    pool. When the buyback price is triggered (72 hours meta battle birds Avg price), the smart contract will
+                    automatically execute the buyback and burn. Otherwise, the funds will continue to accumulate.
+                </p>
+            </div>
+            <div class="row mt-3 pt-2  text-center">
+                <div class="col-lg-12 p-3" style="background-color: rgb(27, 26, 26); border-radius: 10px;">
+                    <div class="container p-2 rounded text-center" style="background-color:#192029; ;">
+                        <div class="row p-2 text-white">
+                            <div class="col-lg-3 p-2">
+                                Total meta battle birds Staked
+
+                                <div class="box-2 p-2">
+                                    0
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 p-2">
+                                Total meta battle birds Staked
+
+                                <div class="box-2 p-2">
+                                    0
+                                </div>
+                            </div>
+                            <div class="col-lg-3 p-2">
+                                Total meta battle birds Staked
+
+                                <div class="box-2 p-2">
+                                    0
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 p-2">
+                                Total meta battle birds Staked
+
+                                <div class="box-2 p-2">
+                                    0
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-2 text-white">
+                            <div class="col-lg-12 p-2">
+
+
+                                <div class="box-2 p-2">
+                                    <div class="row">
+                                        <div class="col-lg-3">Time</div>
+                                        <div class="col-lg-3">Time</div>
+                                        <div class="col-lg-3">Time</div>
+                                        <div class="col-lg-3">Time</div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <p class="text-white text-center">
+                            View More <i class="fa fa-angle-right"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    </div>
+    <button id="social"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-three-dots" viewBox="0 0 16 16">
+            <path
+                d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z">
+            </path>
+        </svg></button>
+    <button id="social2">
+        <i class="fa fa-download"></i>
+    </button>
+    <button id="social3">
+        <i class="fa fa-comments"></i>
+
+    </button>
+    <button id="social4">
+        <i class="fas fa-receipt"></i>
+
+    </button>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.0/mdb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

@@ -26,7 +26,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.3",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "web3": "^1.7.1"
   },
   "devDependencies": {
     "grunt": "^1.4.1",

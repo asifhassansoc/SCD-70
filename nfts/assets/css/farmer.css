@@ -1,0 +1,433 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Cinzel+Decorative:wght@700&family=Montserrat:ital,wght@0,600;1,900&family=Poppins:ital,wght@1,500&display=swap');
+
+@media (max-width: 1000px) {
+    .lg-active{
+        display: none;
+    }
+    .how{
+        margin-top: 10px !important;
+      
+
+    }
+.sec-mid-in{
+    height: 170px !important; border-radius: 20px; margin-top: 15px !important; width: 100%;
+}
+
+  
+}
+.game-2i {
+    width: 100%;
+    height: 480px;
+}
+.b-box{
+    height: 210px;
+}
+.how{
+    margin-top: 70px !important;
+}
+.sm-active{
+    display: none;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.head{
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+}
+.navbar .nav-link{
+    color: #fff !important;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
+.h4{
+    color: rgb(255, 255, 255);
+}
+h1{
+    font-family: 'Montserrat', sans-serif !important;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    font-size: 80px !important;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.line img{
+    width: 100% !important;
+    padding: 0;
+    margin: 0;
+}
+.line-2 img{
+    width: 12% !important;
+    padding: 0;
+    height: 500px;
+    margin: 0;
+}
+h4{
+    color: black;
+    text-align: center !important;
+    font-size: 30pt;
+}
+.first{
+    color: black;
+    text-align: center !important;
+    font-weight: bolder;
+}
+h5{
+    color: black;
+    text-align: left;
+    font-size: 45pt;
+    font-family: 'Montserrat', sans-serif;
+}
+h6{
+    color: black;
+    text-align: left !important;
+    font-size: 15pt;
+}
+.sm-active{
+    display: none;
+}
+p{
+    text-align: justify;
+}
+.btn-animate {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: royalblue;
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+   }
+   
+   .btn-animate span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid royalblue;
+   }
+   
+   .btn-animate span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+   }
+   
+   .btn-animate:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: royalblue;
+   }
+   
+   .btn-animate:hover {
+    color: white;
+   }
+   
+   .btn-animate:active span::before {
+    background: #2751cd;
+   }
+   .bg-game-1{
+       background-image: url(../images/Capture.PNG);
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+   }
+   .bg-game-2{
+    background-image: url(../images/game-2bg.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+   .game{
+       height: 700px;
+       width: 100%;
+       margin-top: 70px;
+       background-image: url(../images/main-game-1.PNG);
+  
+       background-repeat: no-repeat;
+       margin-bottom: 50px;
+   }
+   .game2{
+  
+    width: 100%;
+    margin-top: 130px;
+    margin-bottom: 50px;
+   
+}
+.game2 video{
+    border: 10px solid black;
+}
+   #social{
+    
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the .btn-animate at the bottom of the page */
+    right: 30px; /* Place the .btn-animate 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(61, 62, 68); /* Set a background color */
+
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px 15px 10px 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  #social2{
+    
+    position: fixed; /* Fixed/sticky position */
+    bottom: 75px; /* Place the .btn-animate at the bottom of the page */
+    right: 30px; /* Place the .btn-animate 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(61, 62, 68); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px 15px 10px 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  #social3{
+    
+    position: fixed; /* Fixed/sticky position */
+    bottom: 185px; /* Place the .btn-animate at the bottom of the page */
+    right: 27px; /* Place the .btn-animate 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(48, 167, 247); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px 15px 10px 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  #social4{
+    
+    position: fixed; /* Fixed/sticky position */
+    bottom: 130px; /* Place the .btn-animate at the bottom of the page */
+    right: 30px; /* Place the .btn-animate 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(61, 62, 68); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px 15px 10px 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  .sec-2{
+  
+      background-position: left;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1060%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(39%2c 48%2c 54%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c35 C 144%2c100.2 432%2c331 720%2c361 C 1008%2c391 1296%2c220.2 1440%2c185L1440 560L0 560z' fill='rgba(50%2c 62%2c 85%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1060'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");  }
+
+.carousel-inner img{
+    clip-path: polygon(8% 0, 100% 0, 93% 100%, 0% 100%);
+}
+.sec-2-pt-2{
+    margin-top: 130px;
+}
+.sec-2-pt-2 h4{
+ color: #fff;
+ text-align: right !important;
+ font-size: 35pt;
+ margin: 10px;
+width: 100%;
+text-decoration: underline;
+text-decoration-color: yellow;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: bolder;
+}
+.head-farmer{
+    background-image: url(../images/bg-farmer.jpg);
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+.overlay-farmer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #050d14c0;
+}
+.body-farmer{
+    background-color: #050d14;
+}
+.display-3{
+    font-weight: bolder;
+}
+.cont-top{
+     padding-bottom: 20px;
+    margin-top: 300px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.692);
+    background-color: #353e46;
+}
+.cont-top-2{
+   padding-bottom: 10px;
+   margin-top: 50px;
+   border-radius: 20px;
+   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.692);
+   background-color: #353e46;
+}
+.navbar{
+    background-color: #202226 !important;
+}
+.cont-top-inner{
+    border: 2px solid black;
+width: 100%;
+    height: 100px;
+    border-radius: 15px;
+margin-top: 130px;
+    background-color: #050d14;
+
+    
+}
+.content-farmer{
+    margin-top: 200px;
+}
+.text-box{
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.btn-sm{
+    height: 10px !important;
+    width: 50px;
+}
+.sec-2-in{
+    background-color: #050d14; height: 90%; border-radius: 20px; margin-top: 25px; margin-left: 100px;
+}
+
+.sec-3-in{
+    background-color: #090b0e; height: 95%; border-radius: 20px; margin-top: 25px;
+}
+.sec-mid-in{
+    height: 430px; border-radius: 20px; margin-top: 25px; width: 100%;
+}
+.box{
+   
+    width: 60%;
+    color: #fff;
+    padding: 10px;
+    background-color: rgb(39, 37, 37);
+    border-radius: 10px;
+}
+.box-2{
+   text-align: center;
+    width: 100%;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    background: rgb(34,49,59);
+background: linear-gradient(288deg, rgba(34,49,59,1) 28%, rgba(35,40,55,1) 55%);;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.582);
+}
+label{
+    margin-top: 7px;
+    color: #fff;
+
+}
+.card{
+    background-color:#0a1824; 
+    padding: 15px;
+    border: 2px solid #88929b;
+    color: #fff;
+}
+.box-2{
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    background-color: rgb(51, 50, 50);
+    border-radius: 10px;
+}
+.card{
+    margin-top: 10px;
+}
+/* From css.wallet-btns.io by @adamgiebl */
+.wallet-btn {
+    font-size: 18px;
+    margin-top: 30px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100% );
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    padding: 0 2em;
+    border-radius: 0.3em;
+    color: #fff;
+    height: 2.6em;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+   }
+   
+   .wallet-btn p{
+    margin-top: 10px;
+   }
+   .wallet-btn:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+    transform: translateY(-0.1em);
+   }
+   
+   .wallet-btn:active {
+    box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+    transform: translateY(0em);
+   }
+   a:hover{
+       text-decoration: none !important;
+       color: #fff;
+   }
+   .fa-bars{
+       color: #fff !important;
+   }
+   p{
+      
+       font-size: 15pt !important;
+   }
+   .navbar .nav-link{
+       font-size: 13pt !important;
+   }
+   ::-webkit-scrollbar{
+       width: 10px;
+
+   }
+   ::-webkit-scrollbar-thumb{
+       border-radius: 35px;
+        background-color: black;
+    }

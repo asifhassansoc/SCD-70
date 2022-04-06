@@ -1,0 +1,52 @@
+@media screen and (max-width:600px) {
+    .header {
+        margin-top: 20px !important;
+    }
+    .card{
+        margin-top: 30px !important;
+
+        height: 300px !important;
+    }
+}
+
+.header {
+    margin-top: 100px;
+}
+
+@font-face {
+    font-family: one;
+    src: url(fonts/AngryBirdsMovie-BAqV.ttf);
+}
+
+.one {
+    font-family: one;
+    font-size: 50pt !important;
+}
+.two{
+    font-family: one;
+    font-size: 30pt !important;
+    -webkit-text-stroke: 1px black;
+    color: rgb(255, 233, 40) !important;
+
+}
+
+h1 {
+    -webkit-text-stroke: 2px black;
+}
+
+.body {
+    background-image: url(https://th.bing.com/th/id/R.0b962f384fc333837891c4745c3b798e?rik=IcV9%2bh043we0jA&riu=http%3a%2f%2fphandroid.s3.amazonaws.com%2fwp-content%2fuploads%2f2014%2f02%2fFlappy-Birds-gif.gif&ehk=m84vzR%2bYUJK9ML9AZxYKggNeSg5waGRPhRbUjiRvu7M%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* From cssbuttons.io */
+button {
+    background: transparent;
+    border: none;
+    width: 200px;
+}
+.card{
+    height: 400px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="blockrain.css">
+</head>
+<style>
+.center {
+    text-align: center;
+}
+.nonp2, .p2{
+    width: 10%;
+    padding: 1%;
+    background-image: linear-gradient(#1B346A, #708CD7);
+    color: orange;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 5%;
+}
+</style>
+<body>
+    <div class="center" id="btnbox">
+    <img src="https://www.pngplay.com/wp-content/uploads/11/Tetris-Logo-Transparent-File.png" alt="">
+    <br />
+    <button onclick="hide(), show()"
+    class="nonp2" id="nonp2"> NON-P2E </button>
+    <button onclick="login()"
+    class="p2" id="p2"> P2E </button>
+    </div>
+    <div id="game" class="game" style="display: none; width:450px; height:700px;"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/moralis@1.0.3/dist/moralis.js"></script>
+    <script src="blockrain.jquery.js"></script>
+<!-- <script src="blockrain.jquery.min.js"></script> -->
+<script>
+    $('.game').blockrain();
+    function hide(){
+        document.getElementById("btnbox").style.display = "none";
+    }
+    function show(){
+        document.getElementById("game").style.display = "block";
+    }
+</script>
+</body>
+</html>
