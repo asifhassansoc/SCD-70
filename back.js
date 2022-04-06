@@ -51,21 +51,31 @@ app.post('/adduser', function (req, res) {
     res.end();
  })
 
- app.post('/addscore', function (req, res) {
+ app.post('/score', function (req, res) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
-  let record = {
-    ethadd : req.body.ethadd,
-    score : req.body.score,
-    steps : req.body.steps,
-};
-    console.log(record);
-    let sql = "INSERT INTO scores SET ?";
-    connection.query(sql, record, (err) => {
+//   let record = {
+//     ethadd : req.body.ethadd,
+//     score : req.body.score,
+//     steps : req.body.steps,
+// };
+//     console.log(record);
+    connection.query(`SELECT * FROM users WHERE waletadd="${req.body.ethadd}"`, function (err, result) {
       if (err) throw err;
-      // console.log(err);
-        res.end();
+      res.send(result);
+      console.log(result);
+      var token = result[0].tokens;
+  let sql_user = `update users SET tokens=${token + req.body.score} where waletadd="${req.body.ethadd}"`;
+      connection.query(sql_user, (err) => {
+          if (err) throw err;
+          res.end();
       });
-    res.end();
+    })
+    // let sql = "INSERT INTO scores SET ?";
+    // connection.query(sql, record, (err) => {
+    //   if (err) throw err;
+    //     res.end();
+    //   });
+    // res.end();
  })
 
 app.get('/getid', async function (req, res) {
@@ -112,6 +122,14 @@ app.get('/addtokens', async function (req, res) {
             res.end();
         });
       })
+  })
+
+app.get('/getimage', async function (req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+    connection.query(`SELECT * FROM users WHERE waletadd="${req.query.ethadd}"`, function (err, result) {
+        if (err) throw err;
+        res.send(result);
+      });
   })
 
 var server = app.listen(8081, function () {

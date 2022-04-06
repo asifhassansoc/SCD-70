@@ -46,7 +46,7 @@ function adduser(ethadd){
 function bublescore(score) {
     var score = score;
     // console.log(save, ethadd);
-    fetch("http://localhost:8081/bublescore", {
+    fetch("http://localhost:8081/score", {
       headers: {
         "Content-type": "application/json; charset=UTF-8"
       },
@@ -374,7 +374,7 @@ function gameload() {
             
             // Add cluster score
             score += cluster.length * 100;
-            // console.log(score);
+            // console.log(score, "377");
             
             // Find floating clusters
             floatingclusters = findFloatingClusters();
@@ -810,18 +810,19 @@ function gameload() {
                 
             function my(score) {   
                 if(gover == false){
-                fscore = score;
-                console.log(fscore,"score");
+                // fscore = score;
+                console.log(score,"score");
+                var token = score/1000;
+                fscore = Math.round(token);
+                console.log(fscore);
                 if (ethadd != '') {
+                    console.log(fscore);
                     bublescore(fscore);
                 }
                 gover = true;
              }
             }
               
-
-
-            
             context.fillStyle = "rgba(0, 0, 0, 0.8)";
             context.fillRect(level.x - 4, level.y - 4, level.width + 8, level.height + 2 * level.tileheight + 8 - yoffset);
             

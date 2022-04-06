@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="Img" id="img">
+    <script>
+        var resimg;
+    fetch(`http://192.168.1.6:5000/resize?img_url=https://61yqu2dmbuhx.usemoralis.com/vis_logo.PNG`)
+    .then(function (res) {
+      return res.json();
+    })
+    .then(function (data) {
+      resimg = data.hosted_img;
+    document.getElementById("img").src = resimg;
+      console.log(resimg);
+    })
+    </script>
+</body>
+</html>

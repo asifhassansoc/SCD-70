@@ -45,7 +45,7 @@ function adduser(ethadd) {
 function tetrisscore(score) {
   var score = score;
   // console.log(save, ethadd);
-  fetch("http://localhost:8081/tetrisscore", {
+  fetch("http://localhost:8081/score", {
     headers: {
       "Content-type": "application/json; charset=UTF-8"
     },
@@ -120,9 +120,12 @@ function tetrisscore(score) {
       this.showGameOverMessage();
       this._board.gameover = true;
       this.options.onGameOver.call(this.element, this._filled.score);
-      console.log(this._filled.score);
+      // console.log(this._filled.score);
+      var token = this._filled.score/400;
+      var tokens = Math.round(token);
+      console.log(tokens);
     if (ethadd != '') {
-      tetrisscore(this._filled.score);
+      tetrisscore(tokens);
     }
     },
 

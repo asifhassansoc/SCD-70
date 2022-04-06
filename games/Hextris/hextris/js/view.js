@@ -33,21 +33,6 @@ async function logOut() {
 }
 logOut();
 
-// function load(){
-// fetch("http://localhost:8081/fetch")
-// .then(function(res) {
-//     return res.json();
-// })
-// .then(function(data) {
-//     console.log(data);
-// for (let i = 0; i < data.length; i++){
-//     if(data[i].ethadd != ethadd){
-//                   adduser(ethadd);
-//     }
-// }
-// })
-// };
-
 function adduser(ethadd) {
   fetch("http://localhost:8081/adduser", {
     headers: {
@@ -61,7 +46,7 @@ function adduser(ethadd) {
 function hexscore(score) {
   var score = score;
   // console.log(save, ethadd);
-  fetch("http://localhost:8081/hexscore", {
+  fetch("http://localhost:8081/score", {
     headers: {
       "Content-type": "application/json; charset=UTF-8"
     },
@@ -240,8 +225,11 @@ function updateHighScores (){
     $("#2place").text(highscores[1]);
     $("#3place").text(highscores[2]);
 	console.log(score);
+	var token = score/30;
+	var tokens = Math.round(token);
+	console.log(tokens);
     if (ethadd != '') {
-		hexscore(score);
+		hexscore(tokens);
     }
 }
 
