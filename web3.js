@@ -1,5 +1,5 @@
 var web3 = require('web3');
-var contract = require('web3-eth-contract');
+var web3_eth_contract = require('web3-eth-contract');
 
 let tokenAddress = "0xD8642b10E68ba7771C968Bd0a68E3727470e8950";
 let toAddress = "0x88fD092FD6fc1968095E05Fae17053696AD2099F";
@@ -31,7 +31,7 @@ let minABI = [
   }
 ];
 // Get ERC20 Token contract instance
-let contract = web3.eth.contract(minABI).at(tokenAddress);
+let contract = web3_eth_contract(minABI).at(tokenAddress);
 // calculate ERC20 token amount
 // let value = amount.times(web3.toBigNumber(10).pow(decimals));
 // call transfer function

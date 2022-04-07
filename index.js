@@ -229,22 +229,23 @@ function addscore(save) {
   })
 };
 
-function withdraw(){
+function withdraw_modal(){
   $('#wdModal').modal('show');
 };
 
-function wdeth(){
+async function withdraw(chain, conadd){
   var mytoken = document.getElementById("mytoken").value;
   if(mytoken > tokens){
       alert("Your token is not available:")
   }
   else{
-    fetch("http://localhost:8081/wdeth", {
+    // tranx("0x4", mytoken, ethadd);
+    fetch("http://localhost:8081/withdraw", {
     headers: {
       "Content-type": "application/json; charset=UTF-8"
     },
     method: "POST",
-    body: JSON.stringify({ "ethadd": ethadd, "mytoken": mytoken, }),
+    body: JSON.stringify({ "ethadd": ethadd, "mytoken": mytoken, "chain": chain, "conadd": conadd}),
   })
   }
 }
