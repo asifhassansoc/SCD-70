@@ -54,7 +54,7 @@ app.post('/adduser', function (req, res) {
     res.end();
  })
 
- app.post('/score', function (req, res) {
+app.post('/score', function (req, res) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 //   let record = {
 //     ethadd : req.body.ethadd,

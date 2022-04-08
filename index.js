@@ -62,6 +62,7 @@ function getid(){
     return res.json();
   })
   .then(function (data) {
+    console.log(data);
     userid = data[0].id;
     // console.log(userid);
     tokens = data[0].tokens;

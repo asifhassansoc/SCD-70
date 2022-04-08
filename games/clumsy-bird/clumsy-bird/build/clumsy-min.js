@@ -9,18 +9,47 @@ async function login() {
   let user = Moralis.User.current();
   if (!user) {
     user = await Moralis.authenticate({ signingMessage: "Log in using Moralis" })
-      .then(function (user) {
+      .then(async function (user) {
         console.log("logged in user:", user);
         console.log(user.get("ethAddress"));
         ethadd = user.get("ethAddress");
-        //   load();
-        //   adduser(ethadd);
-        // window.onReady(function onReady() {
-        //     game.onload();
-        //     });
-        hide();
-        $('#exampleModal').modal('show');
-        nfts(ethadd);
+        chainId = await Moralis.getChainId();
+        if (chainId != '0x38') {
+          alert("change network to bsc");
+          return;
+        }
+        const wallet_options = { chain: 'bsc', address: user.get("ethAddress")};
+                const balance = await Moralis.Web3API.account.getNativeBalance(wallet_options);
+                const cur_balance = Moralis.Units.FromWei(balance.balance);
+                console.log(cur_balance);
+              var amount_to_play = (((0.0001 / 100) * 3) + 0.0001).toFixed(6) ;
+        const options = {
+          type: "native",
+
+          amount: Moralis.Units.ETH(amount_to_play),
+          receiver: "0x5164F205c6a7f3fEfEe9e7C409012E0F4384c242"
+        };
+        if(cur_balance < 0.0001)
+        {
+          alert('INSUFFICIENT FUNDS ! ');
+          return;
+        }
+        try {
+          let result = await Moralis.transfer(options);
+          if (result) {
+            console.log(result);
+            nfts(ethadd);
+          }
+          else {
+            return;
+            console.log("data");
+          }
+        }
+        catch (result) {
+          console.log(result);
+
+        }
+        
       })
       .catch(function (error) {
         console.log(error);
@@ -47,18 +76,18 @@ async function nfts(add) {
     var myimg = metadata.image;
     console.log(myimg, typeof myimg);
     fetch(`http://192.168.1.6:5000/resize?img_url=https://61yqu2dmbuhx.usemoralis.com/vis_logo.PNG`)
-    .then(function (res) {
-      return res.json();
-    })
-    .then(function (data) {
-      resimg = data.hosted_img;
-      showimg(resimg);
-      // console.log(resimg);
-    })
-    }
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (data) {
+        resimg = data.hosted_img;
+        showimg(resimg);
+        // console.log(resimg);
+      })
+  }
 }
 
-function showimg(resimg){
+function showimg(resimg) {
   document.getElementById("mynfts").innerHTML += `
   <div class="col-lg-4 col-md-4">
   <div class="card nftcard">
